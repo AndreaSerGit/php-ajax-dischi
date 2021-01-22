@@ -1,0 +1,11 @@
+@mixin flexAcenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin backgroundSize {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}

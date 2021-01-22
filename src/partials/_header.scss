@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  height: 70px;
+  background-color: $backgroundcolorB;
+  .logo {
+    height: 100%;
+    @include flexAcenter;
+    img {
+      height: 50px;
+    }
+  }
+}
