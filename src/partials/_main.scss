@@ -17,6 +17,9 @@ main {
       background-color: $backgroundcolorB;
       margin: 10px;
       text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
       img {
         width: 100%;
         margin-bottom: 20px;

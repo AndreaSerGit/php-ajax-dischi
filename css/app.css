@@ -47,6 +47,9 @@ main .disk-container .disk {
   margin: 10px;
   text-align: center;
 }
+main .disk-container .disk:hover {
+  cursor: pointer;
+}
 main .disk-container .disk img {
   width: 100%;
   margin-bottom: 20px;
