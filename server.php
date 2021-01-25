@@ -5,15 +5,21 @@
   $CdSelezionati = [];
 
    foreach ($CDs as $Cd) {
-     if($Cd['genre'] == $_GET["genere"]) {
+      if($_GET["genere"] == "All") {
+
+      }
+     elseif($Cd['genre'] == $_GET["genere"]) {
          $CdSelezionati[] = $Cd;
+
      }
    };
 
-
    header("Content-type: application/json");
 
-   echo json_encode($CDs);
+   echo json_encode($CdSelezionati);
+
+
+
 
 
 ?>

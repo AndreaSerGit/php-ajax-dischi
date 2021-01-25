@@ -1857,6 +1857,14 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
       app.cds = result.data;
       console.log(app.cds);
     });
+  },
+  methods: {
+    selezionaGenere: function selezionaGenere() {
+      axios.get('server.php').then(function (result) {
+        app.cds = result.data;
+        console.log(app.cds);
+      });
+    }
   }
 });
 

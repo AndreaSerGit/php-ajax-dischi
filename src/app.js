@@ -9,14 +9,27 @@ var app = new Vue(
       cds: [],
     },
     mounted: function() {
+
         axios
           .get('server.php')
           .then(
             function (result) {
             app.cds = result.data;
-            console.log(app.cds)
+            console.log(app.cds);
       }
     )
+  },
+  methods: {
+    selezionaGenere: function() {
+          axios
+            .get('server.php')
+            .then(
+              function (result) {
+              app.cds = result.data;
+              console.log(app.cds);
+        }
+      )
+    }
   }
 }
 );
