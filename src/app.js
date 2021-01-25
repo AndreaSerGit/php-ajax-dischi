@@ -10,7 +10,7 @@ var app = new Vue(
     },
     mounted: function() {
         axios
-          .get('http://localhost/php-ajax-dischi/server.php')
+          .get('/php-ajax-dischi/server.php')
           .then(
             function (result) {
             app.cds = result.data;
