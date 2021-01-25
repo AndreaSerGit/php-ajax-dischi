@@ -14,7 +14,7 @@
       <main id="app">
 
         <div class="wrapper">
-          <!-- <form action="server.php" method="get">
+          <form action="server.php" method="get">
             <select class="" name="genere">
               <option value="All">All</option>
               <option value="Pop">Pop</option>
@@ -23,7 +23,7 @@
               <option value="Jazz">Jazz</option>
             </select>
             <button type="submit" name="button">Invia</button>
-          </form> -->
+          </form>
 
           <div class="disk-container">
                   <div class="disk" v-for="cd in cds">
