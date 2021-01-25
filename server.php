@@ -2,7 +2,6 @@
   include __DIR__ . "/db.php";
 
   echo $_GET["genere"];
-  $CdSelezionati = [];
 
    foreach ($CDs as $Cd) {
       if($_GET["genere"] == "All") {
@@ -17,8 +16,6 @@
    header("Content-type: application/json");
 
    echo json_encode($CdSelezionati);
-
-
 
 
 
