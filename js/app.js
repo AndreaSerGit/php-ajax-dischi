@@ -1853,7 +1853,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
     cds: []
   },
   mounted: function mounted() {
-    axios.get('/php-ajax-dischi/server.php').then(function (result) {
+    axios.get('server.php').then(function (result) {
       app.cds = result.data;
       console.log(app.cds);
     });
