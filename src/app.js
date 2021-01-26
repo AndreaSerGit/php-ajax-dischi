@@ -7,11 +7,12 @@ var app = new Vue(
     el: "#app",
     data: {
       cds: [],
+      genere: '',
     },
     mounted: function() {
 
         axios
-          .get('server.php')
+            .get('server.php')
           .then(
             function (result) {
             app.cds = result.data;
@@ -22,7 +23,13 @@ var app = new Vue(
   methods: {
     selezionaGenere: function() {
           axios
-            .get('server.php')
+            .get('server.php',
+            {
+              params: {
+                genre: app.genere
+              }
+            }
+          )
             .then(
               function (result) {
               app.cds = result.data;

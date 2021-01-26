@@ -1,21 +1,23 @@
 <?php
   include __DIR__ . "/db.php";
 
-  echo $_GET["genere"];
+  header("Content-type: application/json");
 
-   foreach ($CDs as $Cd) {
-      if($_GET["genere"] == "All") {
+   $genre = $_GET["genre"];
 
-      }
-     elseif($Cd['genre'] == $_GET["genere"]) {
+   if(empty($genre)) {
+     $CdSelezionati = $CDs;
+   } else {
+     $CdSelezionati = [];
+
+     foreach ($CDs as $Cd) {
+       if($Cd["genre"] == $genre) {
          $CdSelezionati[] = $Cd;
-
+       }
      }
-   };
+   }
+  echo json_encode($CdSelezionati);
 
-   header("Content-type: application/json");
-
-   echo json_encode($CdSelezionati);
 
 
 

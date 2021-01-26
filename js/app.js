@@ -1850,7 +1850,8 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js").de
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: "#app",
   data: {
-    cds: []
+    cds: [],
+    genere: ''
   },
   mounted: function mounted() {
     axios.get('server.php').then(function (result) {
@@ -1860,7 +1861,11 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   },
   methods: {
     selezionaGenere: function selezionaGenere() {
-      axios.get('server.php').then(function (result) {
+      axios.get('server.php', {
+        params: {
+          genre: app.genere
+        }
+      }).then(function (result) {
         app.cds = result.data;
         console.log(app.cds);
       });

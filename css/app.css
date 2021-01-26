@@ -27,7 +27,7 @@ header .logo img {
 main {
   background-color: #181818;
   width: 100%;
-  height: calc(100% - 70px);
+  height: 100vh;
 }
 main .disk-container {
   padding-top: 80px;
