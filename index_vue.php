@@ -14,6 +14,7 @@
       <main id="app">
 
         <div class="wrapper">
+          <form action="server.php" method="get" v-on:click.preventDefault>
             <select class="" name="genre" v-model="genere">
               <option value="">All</option>
               <option value="Pop">Pop</option>
@@ -22,6 +23,9 @@
               <option value="Jazz">Jazz</option>
             </select>
             <button type="button" name="button" @click='selezionaGenere'  >Invia</button>
+
+          </form>
+
 
           <div class="disk-container">
                   <div class="disk" v-for="cd in cds">
